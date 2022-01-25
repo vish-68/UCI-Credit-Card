@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>UCI Credit Card</title>
+
+    <style>
+        body {
+            /* background-image: linear-gradient(to right, rgb(80, 164, 241), rgb(34, 230, 181)); */
+            /* background-image: linear-gradient(to right, rgb(255, 50, 50), rgb(253, 253, 80),  rgb(45, 148, 245), rgb(0, 255, 191)); */
+            background-image: linear-gradient(to right, rgb(218, 42, 42), rgb(48, 108, 238));
+        }
+
+        .heading {
+            padding-top: 25px;
+            text-align: left;
+            /* color: rgb(0, 0, 0); */
+            color: rgb(255, 255, 255);
+            font-size: 38px;
+            /* font-family: "Arial Rounded MT Bold"; */
+            font-family: "Algerian";
+            font-weight: bold;
+            margin-left: 100px;
+        }
+
+        .headings {
+            padding-top: 20px;
+            text-align: left;
+            /* color: rgb(0, 0, 0); */
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            /* font-family: "Arial Rounded MT Bold"; */
+            font-family: "Algerian";
+            font-weight: bold;
+            margin-left: 45px;
+        }
+
+        .line {
+            /* background-color: rgb(0, 0, 0); */
+            background-color: rgb(255, 255, 255);
+            height: 5px;
+        }
+
+        .container {
+            color: black;
+            font-weight: bold;
+            width: 85%;
+
+        }
+
+        .col-md {
+            margin-left: 15px;
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+
+        .floating {
+            /* border-color: rgb(0, 0, 0);
+            border-width: 2px; */
+            height: 20px;
+        }
+
+        .btn {
+            height: 52px;
+            font-family: "Algerian";
+            font-size: 25px;
+            color: black;
+            background-color: rgba(255, 255, 255, 1);
+            font-weight: bolder;
+            /* border-color: rgb(0, 0, 0);
+            border-width: 2px; */
+        }
+
+        .btn:hover {
+            height: 52px;
+            font-size: 27px;
+            font-weight: bolder;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+            /* border-color: rgb(0, 0, 0);
+            border-width: 2px; */
+        }
+
+        .name {
+            /* color: rgb(0, 0, 0); */
+            color: rgb(255, 255, 255);
+            font-size: 38px;
+            /* font-family: "Arial Rounded MT Bold"; */
+            font-family: "Algerian";
+            font-weight: bold;
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        .contact {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        img {
+            margin-left: 25px;
+            position: relative;
+            float: right;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" 
+    integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" 
+    crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" 
+    integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" 
+    crossorigin="anonymous"></script>
+    -->
+
+
+    <div class="heading">
+        UCI Credit Card
+    </div>
+
+    <div class="line">
+    </div>
+    <br>
+    <br>
+
+
+    <form action="/UCI" method="POST">
+        <div class="container container1">
+
+            <div class="headings">
+                Personal Details :-
+            </div>
+
+            <div class="line">
+            </div>
+            <br>
+            <br>
+
+            <div class="row g-2">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="text" class="form-control floating" id="floating_name" name="names" placeholder="NAME" required autocomplete="off">
+                        <label for="floating_name">NAME</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="number" class="form-control floating" id="floating_age" placeholder="AGE"
+                            name="AGE" required>
+                        <label for="floating_age">AGE</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select class="form-select floating" id="floating_sex" aria-placeholder="SEX" name="SEX"
+                            required>
+                            <option selected>Select</option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                        </select>
+                        <label for="floating_sex">SEX</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-2">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select class="form-select floating" id="floating_education" aria-placeholder="EDUCATION"
+                            name="EDUCATION" required>
+                            <option selected>Select</option>
+                            <option value="1">Graduate School</option>
+                            <option value="2">University</option>
+                            <option value="3">High School</option>
+                            <option value="4">Others</option>
+                            <option value="0">Other</option>
+                            <option value="5">Unknown</option>
+                            <option value="6">Unknown</option>
+                        </select>
+                        <label for="floating_education">EDUCATION</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select class="form-select floating" id="floating_marriage" aria-placeholder="MARRIAGE"
+                            name="MARRIAGE" required>
+                            <option selected>Select</option>
+                            <option value="1">Married</option>
+                            <option value="2">Single</option>
+                            <option value="0">Other</option>
+                            <option value="3">Others</option>
+                        </select>
+                        <label for="floating_marriage">MARRIAGE</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="number" class="form-control floating" id="floating_limit_balance"
+                            placeholder="LIMIT BALANCE" name="LIMIT_BAL" step="0.01" required>
+                        <label for="floating_limit_balance">LIMIT BALANCE</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="headings">
+                Replacement Status :-
+            </div>
+
+            <div class="line">
+            </div>
+            <br>
+            <br>
+
+            <div class="row g-2">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select class="form-select floating" id="In_September" aria-placeholder="In September"
+                            name="PAY_0" required>
+                            <option selected>Select</option>
+                            <option value="-2">No Consumption</option>
+                            <option value="-1">Pay duly</option>
+                            <option value="1">Payment delay for one month</option>
+                            <option value="2">Payment delay for two month</option>
+                            <option value="3">Payment delay for three month</option>
+                            <option value="4">Payment delay for four month</option>
+                            <option value="5">Payment delay for five month</option>
+                            <option value="6">Payment delay for six month</option>
+                            <option value="7">Payment delay for seven month</option>
+                            <option value="8">Payment delay for eight month</option>
+                            <option value="0">Other</option>
+                        </select>
+                        <label for="In_September">In September</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select class="form-select floating" id="In_August" aria-placeholder="In August" name="PAY_2"
+                            required>
+                            <option selected>Select</option>
+                            <option value="-2">No Consumption</option>
+                            <option value="-1">Pay duly</option>
+                            <option value="1">Payment delay for one month</option>
+                            <option value="2">Payment delay for two month</option>
+                            <option value="3">Payment delay for three month</option>
+                            <option value="4">Payment delay for four month</option>
+                            <option value="5">Payment delay for five month</option>
+                            <option value="6">Payment delay for six month</option>
+                            <option value="7">Payment delay for seven month</option>
+                            <option value="8">Payment delay for eight month</option>
+                            <option value="0">Other</option>
+                        </select>
+                        <label for="In_August">In August</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select class="form-select floating" id="In_July" aria-placeholder="In July" name="PAY_3"
+                            required>
+                            <option selected>Select</option>
+                            <option value="-2">No Consumption</option>
+                            <option value="-1">Pay duly</option>
+                            <option value="1">Payment delay for one month</option>
+                            <option value="2">Payment delay for two month</option>
+                            <option value="3">Payment delay for three month</option>
+                            <option value="4">Payment delay for four month</option>
+                            <option value="5">Payment delay for five month</option>
+                            <option value="6">Payment delay for six month</option>
+                            <option value="7">Payment delay for seven month</option>
+                            <option value="8">Payment delay for eight month</option>
+                            <option value="0">Other</option>
+                        </select>
+                        <label for="In_July">In July</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-2">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select class="form-select floating" id="In_June" aria-placeholder="In June" name="PAY_4"
+                            required>
+                            <option selected>Select</option>
+                            <option value="-2">No Consumption</option>
+                            <option value="-1">Pay Duly</option>
+                            <option value="1">Payment delay for one month</option>
+                            <option value="2">Payment delay for two month</option>
+                            <option value="3">Payment delay for three month</option>
+                            <option value="4">Payment delay for four month</option>
+                            <option value="5">Payment delay for five month</option>
+                            <option value="6">Payment delay for six month</option>
+                            <option value="7">Payment delay for seven month</option>
+                            <option value="8">Payment delay for eight month</option>
+                            <option value="0">Other</option>
+                        </select>
+                        <label for="In_June">In June</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select class="form-select floating" id="In_May" aria-placeholder="In May" name="PAY_5"
+                            required>
+                            <option selected>Select</option>
+                            <option value="-2">No Consumption</option>
+                            <option value="-1">Pay duly</option>
+                            <option value="1">Payment delay for one month</option>
+                            <option value="2">Payment delay for two month</option>
+                            <option value="3">Payment delay for three month</option>
+                            <option value="4">Payment delay for four month</option>
+                            <option value="5">Payment delay for five month</option>
+                            <option value="6">Payment delay for six month</option>
+                            <option value="7">Payment delay for seven month</option>
+                            <option value="8">Payment delay for eight month</option>
+                            <option value="0">Other</option>
+                        </select>
+                        <label for="In_May">In May</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select class="form-select floating" id="In_April" aria-placeholder="In April" name="PAY_6"
+                            required>
+                            <option selected>Select</option>
+                            <option value="-2">No Consumption</option>
+                            <option value="-1">Pay Duly</option>
+                            <option value="1">Payment delay for one month</option>
+                            <option value="2">Payment delay for two month</option>
+                            <option value="3">Payment delay for three month</option>
+                            <option value="4">Payment delay for four month</option>
+                            <option value="5">Payment delay for five month</option>
+                            <option value="6">Payment delay for six month</option>
+                            <option value="7">Payment delay for seven month</option>
+                            <option value="8">Payment delay for eight month</option>
+                            <option value="0">Other</option>
+                        </select>
+                        <label for="In_April">In April</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="headings">
+                Amount of bill Statement :-
+            </div>
+
+            <div class="line">
+            </div>
+            <br>
+            <br>
+
+            <div class="row g-2">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="number" class="form-control floating" id="In_September" placeholder="In September"
+                            name="BILL_AMT1" step="0.01" required>
+                        <label for="In_September">In
+                            September</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="number" class="form-control floating" id="In_August" placeholder="In August"
+                            name="BILL_AMT2" step="0.01" required>
+                        <label for="In_August">In
+                            August</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="number" class="form-control floating" id="In_July" placeholder="In July"
+                            name="BILL_AMT3" step="0.01" required>
+                        <label for="In_July">In
+                            July</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-2">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="number" class="form-control floating" id="In_June" placeholder="In June"
+                            name="BILL_AMT4" step="0.01" required>
+                        <label for="In_June">In
+                            June</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="number" class="form-control floating" id="In_May" placeholder="In May"
+                            name="BILL_AMT5" step="0.01" required>
+                        <label for="In_May">In
+                            May</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="number" class="form-control floating" id="In_April" placeholder="In April"
+                            name="BILL_AMT6" step="0.01" required>
+                        <label for="In_April">In
+                            April</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="headings">
+                Amount of previous payment :-
+            </div>
+
+            <div class="line">
+            </div>
+            <br>
+            <br>
+
+            <div class="row g-2">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="number" class="form-control floating" id="In_September" placeholder="In September"
+                            name="PAY_AMT1" step="0.01" required>
+                        <label for="In_September">In
+                            September</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="number" class="form-control floating" id="In_August" placeholder="In August"
+                            name="PAY_AMT2" step="0.01" required>
+                        <label for="In_August">In
+                            August</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="number" class="form-control floating" id="In_July" placeholder="Iuly"
+                            name="PAY_AMT3" step="0.01" required>
+                        <label for="In_July">In
+                            July</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-2">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="number" class="form-control floating" id="In_June" placeholder="Iin June"
+                            name="PAY_AMT4" step="0.01" required>
+                        <label for="In_June">In
+                            June</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="number" class="form-control floating" id="In_May" placeholder="In May"
+                            name="PAY_AMT5" step="0.01" required>
+                        <label for="In_May">In
+                            May</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="number" class="form-control floating" id="In_April" placeholder="In April"
+                            name="PAY_AMT6" step="0.01" required>
+                        <label for="In_April">In
+                            April</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div id="predict">
+            <div class="container" id="button" style="width:40%">
+                <div class="row">
+                    <div class="col">
+                        <div class="d-grid gap-2">
+                            <input type="submit" value="Make Prediction" class="btn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <br>
+    <br>
+    <br>
+
+    <div class="name">
+        - Created by Vishal Upare
+    </div>
+
+    <div class="contact">
+        <a href="https://colab.research.google.com/notebooks/intro.ipynb?utm_source=scs-index">
+            <img src="/static/colab1.png" alt="Google Colab" style="height: 30px;">
+        </a>
+        <a href="https://public.tableau.com/app/profile/vishal2587">
+            <img src="/static/tableau1.png" alt="Tableau" style="height: 30px;">
+        </a>
+        <a href="https://www.kaggle.com/vishalupare">
+            <img src="/static/kaggle1.png" alt="Kaggle" style="height: 30px;">
+        </a>
+        <a href="https://github.com/vish-68">
+            <img src="/static/github1.png" alt="github" style="height: 30px;">
+        </a>
+        <a href="https://www.linkedin.com/in/vishal-upare-a8a092189/">
+            <img src="/static/linkedIn1.png" alt="LinkedIn" style="height: 30px;">
+        </a>
+        <a href="mailto:vishalupare@gmail.com">
+            <img src="/static/gmail1.png" alt="Gmail" style="height: 30px;">
+        </a>
+    </div>
+
+</body>
+
+</html>
